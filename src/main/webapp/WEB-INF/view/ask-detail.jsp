@@ -24,6 +24,8 @@
                     <form:options items="${employee.mapDepartments}"/>
                     </form:select> <br/>
         Car brand <form:radiobuttons path="carBrand" items="${employee.mapCars}" />
+        <br>
+        Languages <form:checkboxes path="languages" items="${employee.mapLanguages}"/>
         <input type="submit">
     </form:form>
 

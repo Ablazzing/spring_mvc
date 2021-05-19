@@ -8,8 +8,30 @@ public class Employee {
     private int salary;
     private String surname;
     private String department;
-    private Map<String,String> mapDepartments;
+    private String carBrand;
+    public static Map<String,String> mapDepartments;
+    public static Map<String,String> mapCars;
+    static {
+        mapDepartments = new HashMap<>();
+        mapDepartments.put("Informational Technology","IT");
+        mapDepartments.put("Human Resources","HR");
+        mapDepartments.put("Finance","FI");
 
+        mapCars = new HashMap<>();
+        mapCars.put("BMW","BMW");
+        mapCars.put("MB","MB");
+        mapCars.put("AUDI","AUDI");
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
 
     @Override
     public String toString() {
@@ -45,7 +67,7 @@ public class Employee {
     }
 
     public void setMapDepartments(Map<String, String> mapDepartments) {
-        this.mapDepartments = mapDepartments;
+        mapDepartments = mapDepartments;
     }
 
     public void setSalary(int salary) {
@@ -60,10 +82,15 @@ public class Employee {
         this.surname = surname;
     }
 
+    public  Map<String, String> getMapCars() {
+        return mapCars;
+    }
+
+    public void setMapCars(Map<String, String> mapCars) {
+        Employee.mapCars = mapCars;
+    }
+
     public Employee() {
-        mapDepartments = new HashMap<>();
-        mapDepartments.put("Informational Technology","IT");
-        mapDepartments.put("Human Resources","HR");
-        mapDepartments.put("Finance","FI");
+
     }
 }

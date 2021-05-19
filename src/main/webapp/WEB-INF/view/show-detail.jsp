@@ -18,6 +18,8 @@
  Salary ${employee.salary}
  <br>
  Department ${employee.department}
+<br>
+ Car ${employee.carBrand}
 
 </body>
 </html>

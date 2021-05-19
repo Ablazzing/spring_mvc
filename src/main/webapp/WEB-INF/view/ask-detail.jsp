@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
+
 <html>
 <head>
     <title>Title</title>
@@ -22,6 +23,7 @@
         Department <form:select path="department">
                     <form:options items="${employee.mapDepartments}"/>
                     </form:select> <br/>
+        Car brand <form:radiobuttons path="carBrand" items="${employee.mapCars}" />
         <input type="submit">
     </form:form>
 

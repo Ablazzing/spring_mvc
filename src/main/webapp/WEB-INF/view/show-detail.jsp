@@ -19,6 +19,8 @@
  <br>
  Salary ${employee.salary}
  <br>
+ Phone ${employee.phone}
+ <br>
  Department ${employee.department}
 <br>
  Car ${employee.carBrand}

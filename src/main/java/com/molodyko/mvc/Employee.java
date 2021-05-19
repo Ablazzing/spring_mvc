@@ -2,20 +2,31 @@ package com.molodyko.mvc;
 
 
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
     @Size(min = 2)
     private String name;
+    @Min(500)
+    @Max(1000)
     private int salary;
     @NotBlank
     private String surname;
     private String department;
     private String carBrand;
     private String[] languages;
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}")
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public static Map<String,String> mapDepartments;
     public static Map<String,String> mapCars;

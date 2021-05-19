@@ -16,9 +16,12 @@
     <H1>What' your name?</H1>
     <br>
     <form:form action="showDetail" modelAttribute="employee">
-        Name <form:input path="name"/>
-        Surname <form:input path="surname"/>
-        Salary <form:input path="salary"/>
+        Name <form:input path="name"/><br/>
+        Surname <form:input path="surname"/><br/>
+        Salary <form:input path="salary"/><br/>
+        Department <form:select path="department">
+                    <form:options items="${employee.mapDepartments}"/>
+                    </form:select> <br/>
         <input type="submit">
     </form:form>
 

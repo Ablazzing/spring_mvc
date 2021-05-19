@@ -1,11 +1,17 @@
 package com.molodyko.mvc;
 
+
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+    @Size(min = 2)
     private String name;
     private int salary;
+    @NotBlank
     private String surname;
     private String department;
     private String carBrand;

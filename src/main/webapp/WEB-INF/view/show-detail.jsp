@@ -11,7 +11,11 @@
     <title>Title</title>
 </head>
 <body>
-<H1>Hello ${nameAttribute}${description}</H1>
+ Name ${employee.name}
+ <br>
+ Surname ${employee.surname}
+ <br>
+ Salary ${employee.salary}
 
 </body>
 </html>

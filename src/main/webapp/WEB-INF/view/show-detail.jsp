@@ -21,6 +21,8 @@
  <br>
  Phone ${employee.phone}
  <br>
+ Email ${employee.email}
+ <br>
  Department ${employee.department}
 <br>
  Car ${employee.carBrand}

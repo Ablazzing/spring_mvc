@@ -2,6 +2,8 @@ package com.molodyko.mvc;
 
 
 
+import com.molodyko.mvc.validation.CheckEmail;
+
 import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +21,16 @@ public class Employee {
     private String[] languages;
     @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}")
     private String phone;
+    @CheckEmail(value = "gmail.com",message = "must be gmail.com")
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getPhone() {
         return phone;
